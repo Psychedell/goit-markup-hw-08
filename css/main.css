@@ -1138,7 +1138,14 @@ ul {
 }
 
 .card__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
 }
 
@@ -1171,6 +1178,9 @@ ul {
 }
 
 .card__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: 1px solid #EEEEEE;
   border-top: transparent;
   padding: 20px 24px;
@@ -1191,11 +1201,5 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   color: #757575;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .card__career--border {
-    padding-bottom: 36px;
-  }
 }
 /*# sourceMappingURL=main.css.map */
