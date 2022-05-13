@@ -36,8 +36,6 @@
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 50px;
   color: #212121;
 }
 
@@ -102,6 +100,12 @@ ul {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -285,15 +289,16 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -306,6 +311,13 @@ ul {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -348,6 +360,10 @@ ul {
   }
 }
 
+.section-doing__title {
+  margin-bottom: 50px;
+}
+
 .doing-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,8 +395,19 @@ ul {
   width: 100%;
 }
 
+.section-team__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team__title {
+    margin-bottom: 50px;
+  }
+}
+
 .team-list {
-  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -388,15 +415,9 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: -30px;
+    margin-left: -30px;
   }
 }
 
@@ -410,7 +431,7 @@ ul {
 .team-list__item {
   background-color: #ffffff;
   max-width: 450px;
-  margin-left: 30px;
+  margin-bottom: 30px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -420,7 +441,7 @@ ul {
   .team-list__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
-    margin-bottom: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -440,8 +461,8 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .team-list__name {
@@ -488,26 +509,48 @@ ul {
   fill: currentColor;
 }
 
+.client-section__title {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .client-section__title {
+    margin-bottom: 50px;
+  }
+}
+
 .client-section__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .client {
-  width: 170px;
-  height: 92px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
 }
 
-.client:not(:first-child) {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .client {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client {
+    -ms-flex-preferred-size: calc(100% / 6 - 30px);
+        flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .client__button {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  padding: 16px 0;
   color: #AFB1B8;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,6 +1,7 @@
 .section-doing {
     padding-top: 0;
     padding-bottom: 94px;
+    
 
     @media screen and (max-width: 1199px) {
             display: none;
@@ -9,6 +10,7 @@
 
 .section-doing__title {
     @extend %title;
+    margin-bottom: 50px;
 }
 
 .doing-list {
