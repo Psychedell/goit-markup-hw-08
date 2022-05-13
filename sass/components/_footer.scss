@@ -1,32 +1,53 @@
 // logo + adress
-.footer {
+footer {
     background-color: #2F303A;
+}
+
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include for-pc-up {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .footer-container {
     display: flex;
-    align-items: flex-start;
-    align-content: center;
-}
-
-.footer__contact {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    align-items: center;
     flex-direction: column;
-    padding-top: 60px;
-    width: 100%;
+    padding: 60px 0;
+
+    @include for-tablet-up {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    @include for-pc-up {
+        justify-content: flex-start;
+        text-align: left;
+    }
 }
 
 .footer-logo {
-    display: block;
     color: $black-logo-color;
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.67;
     text-decoration: none;
-    margin-bottom: 20px;
-    margin-right: 0;
+
+    @include for-pc-up {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 
     &--white {
         color: $white-text-color;
@@ -55,6 +76,7 @@
 }
 
 .footer__address {
+    margin-top: 20px;
     color: $white-text-color;
     transition: color $transition-duration $overlay-cubic;
 }
@@ -71,8 +93,10 @@
 
 //  social
 .footer-social {
-    width: 100%;
-    padding: 72px 93px 100px 70px;
+    @include for-pc-up {
+        padding-left: 70px;
+        padding-top: 0;
+    }
 }
 
 .footer-social__slogan {
@@ -83,7 +107,11 @@
     text-transform: uppercase;
     color: $white-text-color;
     padding-bottom: 20px;
-    width: 100%;
+    padding-top: 60px;
+
+    @include for-tablet-up {
+        padding-top: 0;
+    }
 }
 
 .footer-social__list {
@@ -123,9 +151,24 @@
 }
 
 // footer subscribe form 
+
 .subscribe-form {
-    width: 358px;
-    padding-top: 72px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 60px;
+    
+    @include for-pc-up {
+        text-align: left;
+        padding: 0;
+    }
+}
+
+.subscribe-form__flex-mix {
+    @include for-pc-up {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .subscribe-form__slogan {
@@ -135,14 +178,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white-text-color;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.subscribe-form__inpit {
-    width: 358px;
+.subscribe-form__input {
+    width: 100%;
     height: 50px;
-    left: 815px;
-    top: 2787px;
+    margin-bottom: 20px;
     background: rgba(47, 48, 58, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -153,8 +195,15 @@
     outline: none;
     cursor: pointer;
 
+    @include for-phone-up {
+        max-width: 450px;
+    }
+
+    @include for-pc-up {
+        margin: 0 12px 0 0;
+    }
+
     &::placeholder {
-        font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
         letter-spacing: 0.03em;
@@ -168,9 +217,6 @@
 }
 
 .subscribe-form__button {
-    padding-top: 108px;
-    padding-left: 12px;
-
     &--text {
         @extend %button;
         display: inline-flex;
