@@ -1080,6 +1080,15 @@ footer {
   padding-top: 10px;
   padding-bottom: 20px;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1109,6 +1118,7 @@ footer {
 
 @media screen and (min-width: 1200px) {
   .contact-form-policy__label {
+    font-size: 14px;
     line-height: 1.714;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1134,6 +1144,9 @@ footer {
   border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 8px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .contact-form-policy__input:checked + .contact-form-policy__checkbox {

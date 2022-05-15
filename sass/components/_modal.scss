@@ -181,9 +181,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 100%;
 
     @include for-pc-up {
+        font-size: 14px;
         line-height: 1.714;
         display: flex;
         justify-content: center;
