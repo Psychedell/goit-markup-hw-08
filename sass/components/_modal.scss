@@ -9,6 +9,7 @@
     opacity: 1;
     visibility: visible;
     transition: opacity $transition-duration $overlay-cubic, visibility $transition-duration $overlay-cubic;
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -28,13 +29,17 @@
     transform: translate(-50%, -50%) scale(1);
     transition: transform $transition-duration $overlay-cubic;
     margin: 0;
-    min-width: 528px;
-    min-height: 581px;
+    max-width: 450px;
+    width: 100%;
     background-color: $primary-bg-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @include for-pc-up {
+        max-width: 528px;
+    }
 }
 
 .modal__close-button {
@@ -60,21 +65,22 @@
 
 /* modal form */
 .form {
-    width: 448px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 41px;
-    padding-bottom: 40px;
+    margin: 0 auto;
+    padding: 40px;
 }
 
 .form__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.50;
     text-align: center;
     letter-spacing: 0.03em;
     color: $titile-text-color;
     padding-bottom: 12px;
+
+    @include for-pc-up {
+        line-height: 1.15;
+    }
 }
 
 .contact-form {
@@ -84,6 +90,7 @@
     flex-direction: column;
     margin: 0;
 }
+
 
 .contact-form__label {
     font-weight: 400;
@@ -117,6 +124,10 @@
         line-height: 1.143;
         letter-spacing: 0.01em;
         color: rgba(117, 117, 117, 0.5);
+
+        @include for-pc-up {
+            line-height: 1.167;
+        }
     }
     
     &:focus {
@@ -139,21 +150,34 @@
 }
 
 .contact-form-policy {
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     margin: 0;
+
+    @include for-pc-up {
+         padding-bottom: 30px;
+    }
 }
 
 .contact-form-policy__label {
-    @extend %centeredFlex;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.167;
     letter-spacing: 0.03em;
     cursor: pointer;
+    // width: 100%;
+
+    @include for-pc-up {
+        line-height: 1.714;
+        justify-content: center;
+        align-items: center;
+    }
 
     &--rules {
-        margin-left: 0.25rem;
         color: $accent-text-color;
+
+    @include for-pc-up {
+        margin-left: 5px;
+    }
     }
 }
 
@@ -163,7 +187,7 @@
     height: 15px;
     border: 2px solid $titile-text-color;
     border-radius: 2px;
-    margin-right: 8px;
+    margin-right: 7px;
 }
 
 .contact-form-policy__input:checked+.contact-form-policy__checkbox {
