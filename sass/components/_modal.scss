@@ -10,6 +10,11 @@
     visibility: visible;
     transition: opacity $transition-duration $overlay-cubic, visibility $transition-duration $overlay-cubic;
     overflow-y: scroll;
+    padding: 93px 15px;
+
+    @include for-pc-up {
+        padding: 0;
+    }
 }
 
 // .backdrop.is-hidden {
@@ -19,16 +24,16 @@
 // }
 
 // .backdrop.is-hidden .modal {
-//     transform: translate(-50%, -50%) scale(0.8);
+//     transform: scale(0.8);
+//     @include for-pc-up {
+//         transform: translate(-50%, -50%) scale(0.8);
+//     }
 // }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    position: relative;
     transition: transform $transition-duration $overlay-cubic;
-    margin: 0;
+    margin: 0 auto;
     max-width: 450px;
     width: 100%;
     background-color: $primary-bg-color;
@@ -36,9 +41,14 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transform: scale(1);
 
     @include for-pc-up {
         max-width: 528px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
@@ -85,9 +95,9 @@
 
 .contact-form {
     position: relative;
-    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
     margin: 0;
 }
 
@@ -153,10 +163,13 @@
     padding-top: 10px;
     padding-bottom: 20px;
     margin: 0;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
     @include for-pc-up {
         padding-bottom: 30px;
-        
+        justify-content: center;
     }
 }
 
@@ -165,6 +178,9 @@
     line-height: 1.167;
     letter-spacing: 0.03em;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     // width: 100%;
 
     @include for-pc-up {
@@ -176,10 +192,11 @@
 
     &--rules {
         color: $accent-text-color;
-
-    @include for-pc-up {
         margin-left: 5px;
-    }
+
+    // @include for-pc-up {
+    //     margin-left: 5px;
+    // }
     }
 }
 
@@ -189,7 +206,7 @@
     height: 15px;
     border: 2px solid $titile-text-color;
     border-radius: 2px;
-    margin-right: 7px;
+    margin-right: 8px;
 }
 
 .contact-form-policy__input:checked+.contact-form-policy__checkbox {
