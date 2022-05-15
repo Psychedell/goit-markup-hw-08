@@ -1,10 +1,59 @@
 .page-header {
     border-bottom: 1px solid #ECECEC;
     background: $primary-bg-color;
+    // height: 80px;
+    display: flex;
+    align-items: center;
+    // position: relative;
 }
 
 .container-header {
-    @extend %centeredFlex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    position: relative;
+}
+
+.mobile-btn {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: $primary-bg-color;
+}
+
+.mobile-btn__burger {
+    &:hover,
+    &:focus {
+        fill: $focus-button-bg-color;
+    }
+}
+
+.mobile-btn__burger--icon-close {
+    display: none;
+}
+
+.mobile-btn.is-open .mobile-btn__burger--icon-close {
+    display: block;
+}
+
+.mobile-btn.is-open .mobile-btn__burger--icon-open {
+    display: none;
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $primary-bg-color;
+
+    &.is-open {
+        display: block;
+    }
 }
 
 .logo {
@@ -77,6 +126,7 @@
     text-decoration: none;
     margin-left: auto;
 }
+
 
 .auth-nav__item:not(:first-child) {
     margin-left: 30px;

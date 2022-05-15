@@ -19,40 +19,56 @@
   </head>
   <body>
     <!--Header-->
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container container-header">
         <a href="./index.html" class="logo"><span class="logo__web">Web</span>Studio</a>
-        <nav>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+        <button 
+        class="mobile-btn" 
+        type="button" 
+        aria-expanded="false"
+        data-menu-button>
+          <svg class="mobile-btn__burger" 
+            width="40" 
+            height="40" 
+            aria-label="Переключатель мобильного меню">
+            <use class="mobile-btn__burger--icon-open" href="./images/icons.svg#mobile-burger"></use>
+            <use class="mobile-btn__burger--icon-close" href="./images/icons.svg#mobile-close"></use>
+          </svg>
+        </button>
+        
+        <div class="navigation" data-menu>
+          <nav>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              </li>
+              <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="auth-nav">
+            <li class="auth-nav__item">
+              <a href="mailto:info@devstudio.com" class="auth-nav__link">
+                <svg class="auth-nav__icon--envelope">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+            <li class="auth-nav__item auth">
+              <a href="tel:+380961111111" class="auth-nav__link">
+                <svg class="auth-nav__icon--smartphone">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="auth-nav">
-          <li class="auth-nav__item">
-            <a href="mailto:info@devstudio.com" class="auth-nav__link">
-              <svg class="auth-nav__icon--envelope">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="auth-nav__item auth">
-            <a href="tel:+380961111111" class="auth-nav__link">
-              <svg class="auth-nav__icon--smartphone">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <!-- Main -->
     <main>
@@ -484,7 +500,7 @@
                   <input class="contact-form-policy__input visually-hidden" type="checkbox" name="policy">
                   <span class="contact-form-policy__checkbox"></span>
                   Соглашаюсь с рассылкой и принимаю <a class="contact-form-policy__label--rules" href="">Условия договора</a>
-                </label>
+                </la  bel>
               </div>
             
               <button class="button__send" type="submit">Отправить</button>
@@ -494,5 +510,6 @@
         </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

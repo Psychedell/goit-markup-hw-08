@@ -17,18 +17,18 @@
     }
 }
 
-// .backdrop.is-hidden {
-//     visibility: hidden;
-//     opacity: 0;
-//     pointer-events: none;
-// }
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
 
-// .backdrop.is-hidden .modal {
-//     transform: scale(0.8);
-//     @include for-pc-up {
-//         transform: translate(-50%, -50%) scale(0.8);
-//     }
-// }
+.backdrop.is-hidden .modal {
+    transform: scale(0.8);
+    @include for-pc-up {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
 
 .modal {
     position: relative;
