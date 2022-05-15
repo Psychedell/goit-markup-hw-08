@@ -12,15 +12,15 @@
     overflow-y: scroll;
 }
 
-.backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
+// .backdrop.is-hidden {
+//     visibility: hidden;
+//     opacity: 0;
+//     pointer-events: none;
+// }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.8);
-}
+// .backdrop.is-hidden .modal {
+//     transform: translate(-50%, -50%) scale(0.8);
+// }
 
 .modal {
     position: absolute;
@@ -155,7 +155,8 @@
     margin: 0;
 
     @include for-pc-up {
-         padding-bottom: 30px;
+        padding-bottom: 30px;
+        
     }
 }
 
@@ -168,6 +169,7 @@
 
     @include for-pc-up {
         line-height: 1.714;
+        display: flex;
         justify-content: center;
         align-items: center;
     }

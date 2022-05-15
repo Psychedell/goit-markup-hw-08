@@ -890,17 +890,6 @@ footer {
   overflow-y: scroll;
 }
 
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.8);
-          transform: translate(-50%, -50%) scale(0.8);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -1095,6 +1084,9 @@ footer {
 @media screen and (min-width: 1200px) {
   .contact-form-policy__label {
     line-height: 1.714;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
