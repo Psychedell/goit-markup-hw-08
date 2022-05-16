@@ -15,7 +15,7 @@
   justify-content: space-between;
   height: 80px;
 
-  .mobile-btn {
+  .mob-menu__button-open {
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -28,23 +28,11 @@
   }
 }
 
-.mobile-btn__burger {
+.mobile-btn__focus {
   &:hover,
   &:focus {
     fill: $focus-button-bg-color;
   }
-}
-
-.mobile-btn__burger--icon-close {
-  display: none;
-}
-
-.mobile-btn.is-open .mobile-btn__burger--icon-close {
-  display: block;
-}
-
-.mobile-btn.is-open .mobile-btn__burger--icon-open {
-  display: none;
 }
 
 .navigation {
@@ -56,16 +44,6 @@
     display: flex;
     align-items: center;
   }
-
-  // position: absolute;
-  // top: 100%;
-  // left: 0;
-  // width: 100%;
-  // background-color: $primary-bg-color;
-
-  // &.is-open {
-  //     display: block;
-  // }
 }
 
 .logo {
@@ -196,28 +174,7 @@
 
 // Mobile menu
 
-// .mobile-btn {
-//     display: inline-flex;
-//     margin: 0;
-//     padding: 0;
-//     border: none;
-//     background: $primary-bg-color;
-
-//     @include for-tablet-up {
-//         display: none;
-//     }
-// }
-
-// .mobile-btn__burger {
-
-//     &:hover,
-//     &:focus {
-//         fill: $focus-button-bg-color;
-//     }
-// }
-
 .mob-menu {
-  display: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -225,11 +182,16 @@
   background-color: $primary-bg-color;
   padding-top: 48px;
   padding-bottom: 48px;
+  z-index: 1;
+  overflow-y: scroll;
+  transform: translate(0);
+  transition: transform $transition-duration $overlay-cubic;
 
   &.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transform: translateY(-100%);
   }
 
   .container {
@@ -246,30 +208,24 @@
     display: none;
   }
 }
-.mob-menu__button {
+.mob-menu__button-close {
   position: absolute;
-  top: -40px;
+  top: -30px;
   right: 15px;
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background: $primary-bg-color;
-}
 
-.mob-menu__icon {
-}
-
-.mob-menu__icon--close {
-}
-
-.mob-site-nav__list {
+  &:hover,
+  &:focus {
+    fill: $focus-button-bg-color;
+  }
 }
 
 .mob-site-nav__item {
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 32px;
 }
 
 .mob-site-nav__link {
@@ -282,6 +238,10 @@
 
   &:hover,
   &:focus {
+    color: $accent-text-color;
+  }
+
+  &--current {
     color: $accent-text-color;
   }
 }
