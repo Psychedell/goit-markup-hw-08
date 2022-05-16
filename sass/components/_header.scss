@@ -5,6 +5,10 @@
     display: flex;
     align-items: center;
     // position: relative;
+
+    @include for-tablet-up {
+
+    }
 }
 
 .container-header {
@@ -52,6 +56,13 @@
     @include for-tablet-down {
         display: none;
     }
+
+    @include for-tablet-up {
+        display: flex;
+        align-items: center;
+    }
+
+
     // position: absolute;
     // top: 100%;
     // left: 0;
@@ -71,7 +82,7 @@
     line-height: 1.19;
     text-decoration: none;
     display: block;
-    margin-right: 93px;
+    // margin-right: 93px;
 }
 
 .logo__web {
@@ -125,25 +136,42 @@
 
 
 .auth-nav {
-    @extend %centeredFlex;
+    // @extend %centeredFlex;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    // font-size: 14px;
+    // line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
     margin-left: auto;
+    margin-left: 84px;
+
+    @include for-tablet-up {
+        // flex-direction: column;
+        font-size: 12px;
+        line-height: 1.167;
+    }
+
+    @include for-pc-up {
+
+        font-size: 12px;
+        line-height: 1.167;
+    }
 }
 
 
-.auth-nav__item:not(:first-child) {
-    margin-left: 30px;
+// .auth-nav__item:not(:first-child) {
+//     margin-left: 30px;
+// }
+
+.auth-nav__item:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 .auth-nav__link {
-    @extend %centeredFlex;
+    // @extend %centeredFlex;
     color: $primary-text-color;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     text-decoration: none;
     transition: color $transition-duration $overlay-cubic;
 
@@ -190,31 +218,17 @@
 //     }
 // }
 
-.mob-menu__button {
-    position: absolute;
-    top: -40px;
-    right: 15px;
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: $primary-bg-color;
-}
-
-.mob-menu__icon {}
-
-.mob-menu__icon--close {}
-
 .mob-menu {
+    display: none;
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: $primary-bg-color;
     padding-top: 48px;
-    padding-bottom: 48px;   
-    
-    &is-hidden {
+    padding-bottom: 48px;
+
+    &.is-hidden {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -229,7 +243,26 @@
         padding-left: 40px;
         padding-right: 40px;
     }
+
+    @include for-tablet-up {
+        display: none;
+    }
 }
+
+.mob-menu__button {
+    position: absolute;
+    top: -40px;
+    right: 15px;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: $primary-bg-color;
+}
+
+.mob-menu__icon {}
+
+.mob-menu__icon--close {}
 
 .mob-site-nav__list {
 
