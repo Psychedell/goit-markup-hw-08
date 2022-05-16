@@ -13,7 +13,7 @@
     justify-content: space-between;
     height: 80px;
 
-    position: relative;
+    // position: relative;
 }
 
 .mobile-btn {
@@ -22,6 +22,10 @@
     padding: 0;
     border: none;
     background: $primary-bg-color;
+
+    @include for-tablet-up {
+            display: none;
+        }
 }
 
 .mobile-btn__burger {
@@ -44,16 +48,19 @@
 }
 
 .navigation {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: $primary-bg-color;
 
-    &.is-open {
-        display: block;
+    @include for-tablet-down {
+        display: none;
     }
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+    // width: 100%;
+    // background-color: $primary-bg-color;
+
+    // &.is-open {
+    //     display: block;
+    // }
 }
 
 .logo {
@@ -159,4 +166,150 @@
     height: 16px;
     margin-right: 10px;
     fill: currentColor;
+}
+
+// Mobile menu
+
+// .mobile-btn {
+//     display: inline-flex;
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+//     background: $primary-bg-color;
+
+//     @include for-tablet-up {
+//         display: none;
+//     }
+// }
+
+// .mobile-btn__burger {
+
+//     &:hover,
+//     &:focus {
+//         fill: $focus-button-bg-color;
+//     }
+// }
+
+.mob-menu__button {
+    position: absolute;
+    top: -40px;
+    right: 15px;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: $primary-bg-color;
+}
+
+.mob-menu__icon {}
+
+.mob-menu__icon--close {}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-bg-color;
+    padding-top: 48px;
+    padding-bottom: 48px;   
+    
+    &is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.mob-site-nav__list {
+
+}
+
+.mob-site-nav__item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mob-site-nav__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: $titile-text-color;
+
+    &:hover,
+    &:focus {
+        color: $accent-text-color;
+    }
+}
+
+.mob-auth-nav__list {
+    margin-bottom: 64px;
+}
+
+.mob-auth-nav__item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mob-auth-nav__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.167;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+
+    &:hover,
+    &:focus {
+        color: $accent-text-color;
+    }
+
+
+    &--size {
+        font-size: 34px;
+        line-height: 1.18;
+        color: $accent-text-color;
+
+        @media screen and (max-width: 376px) {
+            font-size: 27px;
+        }
+    }
+}
+
+
+
+.mob-soc__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mob-soc__item {
+    &:not(:last-child) {
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+
+.mob-soc__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-text-color;
 }
