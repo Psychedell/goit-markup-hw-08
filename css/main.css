@@ -1210,7 +1210,7 @@ footer {
 .form__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.50;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -1345,17 +1345,8 @@ footer {
 .contact-form-policy__label {
   font-size: 12px;
   line-height: 1.167;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
