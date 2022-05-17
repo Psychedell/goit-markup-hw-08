@@ -162,9 +162,6 @@
   padding-top: 10px;
   padding-bottom: 20px;
   margin: 0;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
 
   @include for-pc-up {
     padding-bottom: 30px;
@@ -175,27 +172,23 @@
 .contact-form-policy__label {
   font-size: 12px;
   line-height: 1.167;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   cursor: pointer;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
+  @extend %centeredFlex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 320px) and (max-width: 362px) {
+    font-size: 9px;
+  }
 
   @include for-pc-up {
     font-size: 14px;
     line-height: 1.714;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &--rules {
     color: $accent-text-color;
     margin-left: 5px;
-
-    // @include for-pc-up {
-    //     margin-left: 5px;
-    // }
   }
 }
 
@@ -206,7 +199,6 @@
   border: 2px solid $titile-text-color;
   border-radius: 2px;
   margin-right: 8px;
-  //   flex: none;
 }
 
 .contact-form-policy__input:checked + .contact-form-policy__checkbox {
