@@ -135,7 +135,38 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/laptop1.jpg" alt="laptop"/>
+
+                   <!-- <img
+                    srcset="
+                    ./images/tab354_laptop1.jpg 354w,
+                    ./images/pc370_laptop1.jpg 370w,
+                    ./images/mob450_laptop1.jpg 450w,
+                    ./images/tab708_laptop1@2x.jpg 708w,
+                    ./images/pc740_laptop1@2x.jpg 740w,
+                    ./images/mob900_laptop1@2x.jpg 900w
+                    "
+                    src="./images/mob450_laptop1.jpg"
+                    alt="laptop"
+                    sizes="(min-width: 1200px) 25vw, (min-width: 1200px) 50vw, 100vw" 
+                  /> -->
+
+                  <picture>
+                    <source srcset="./images/mob450_laptop1.jpg 1x, ./images/mob900_laptop1@2x.jpg 2x" media="(max-width: 767)">
+                    <source srcset="./images/tab354_laptop1.jpg 1x, ./images/tab708_laptop1@2x.jpg 2x" media="(min-width: 768)">
+                    <source srcset="./images/pc370_laptop1.jpg 1x, ./images/pc740_laptop1@2x.jpg 2x" media="(min-width: 1200)">
+                    <img src="./images/mob450_laptop1.jpg" alt="laptop" />
+                  </picture>
+
+                  <!-- sizes="(min-width: 1200px) 25vw, (min-width: 1200px) 50vw, 100vw" -->
+
+                  
+                  <!-- <img 
+                  class="card__img--size" 
+                  srcset="./images/pc740_laptop1@2x.jpg 2x"
+                  src="./images/pc370_laptop1.jpg" 
+                  width="450"
+                  alt="laptop"/> -->
+
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -149,7 +180,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/basketball.jpg" alt="basketball"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_basketball@2x.jpg 2x"
+                  src="./images/mob450_basketball.jpg" 
+                  width="450"
+                  alt="basketball"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -163,7 +198,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/seafood.jpg" alt="seafood"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_seafood@2x.jpg 2x"
+                  src="./images/mob450_seafood.jpg" 
+                  width="450"
+                  alt="seafood"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -177,7 +216,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/headphones.jpg" alt="headphones"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_headphones@2x.jpg 2x"
+                  src="./images/mob450_headphones.jpg" 
+                  width="450"
+                  alt="headphones"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -191,7 +234,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/boxes.jpg" alt="boxes"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_boxes@2x.jpg 2x"
+                  src="./images/mob450_boxes.jpg" 
+                  width="450"
+                  alt="boxes"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -205,7 +252,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/mac.jpg" alt="bac"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_macbook@2x.jpg 2x"
+                  src="./images/mob450_macbook.jpg" 
+                  width="450"
+                  alt="macbook"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -219,7 +270,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/book.jpg" alt="book"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_book@2x.jpg 2x"
+                  src="./images/mob450_book.jpg" 
+                  width="450"
+                  alt="book"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -233,7 +288,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                <img class="card__img--size" src="./images/steaker.jpg" alt="steaker"/>
+                <img class="card__img--size" 
+                srcset="./images/mob900_labeltag@2x.jpg 2x"
+                  src="./images/mob450_labeltag.jpg" 
+                  width="450"
+                  alt="labeltag"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
@@ -247,7 +306,11 @@
             <li class="card">
               <a href="" class="card__link">
                 <div class="card__img">
-                  <img class="card__img--size" src="./images/laptop-hands.jpg" alt="laptop-hands"/>
+                  <img class="card__img--size" 
+                  srcset="./images/mob900_laptop-hands@2x.jpg 2x"
+                  src="./images/mob450_laptop-hands.jpg" 
+                  width="450"
+                  alt="laptop-hands"/>
                   <div class="card__overlay">
                     <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
