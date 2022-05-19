@@ -5,11 +5,15 @@
 
 .section-team__title {
   @extend %title;
+  font-size: 28px;
+  line-height: 1.18;
   margin-top: 0;
   margin-bottom: 30px;
 
   @include for-pc-up {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 

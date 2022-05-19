@@ -144,7 +144,13 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80px;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-header {
+    height: 80px;
+  }
 }
 
 .container-header .mob-menu__button-open {
@@ -369,7 +375,7 @@ ul {
 
 .mob-menu__button-close {
   position: absolute;
-  top: -30px;
+  top: -38px;
   right: 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -470,6 +476,13 @@ ul {
   background-size: cover;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4))), url(../images/mob-bg-hero.jpg);
@@ -486,8 +499,6 @@ ul {
 
 @media screen and (min-width: 769px) {
   .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4))), url(../images/pc-bg-hero.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/pc-bg-hero.jpg);
   }
@@ -604,6 +615,12 @@ ul {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .features-list__title {
+    text-align: left;
+  }
+}
+
 .features-list__text {
   font-weight: 400;
   font-size: 14px;
@@ -668,6 +685,8 @@ ul {
 }
 
 .section-team__title {
+  font-size: 28px;
+  line-height: 1.18;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -675,6 +694,8 @@ ul {
 @media screen and (min-width: 1200px) {
   .section-team__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 
