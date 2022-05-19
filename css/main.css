@@ -650,7 +650,16 @@ ul {
 }
 
 .section-doing__title {
+  font-size: 28px;
+  line-height: 1.18;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-doing__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .doing-list {
@@ -804,11 +813,15 @@ ul {
 
 .client-section__title {
   margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
 }
 
 @media screen and (min-width: 1200px) {
   .client-section__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 
